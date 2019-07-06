@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner (1)" project="OpenWheatherBDDFramework" tests="12" started="12" failures="2" errors="0" ignored="1">
+  <testsuite name="com.openweather.runner.TestRunner" time="27.0">
+    <testsuite name="Feature: Label verification on Home Page" time="27.0">
+      <testsuite name="Scenario: Error_Message_Verification" time="26.799" incomplete="true">
+        <failure>
+          <expected>Not found</expected>
+          <actual>Not Found</actual>junit.framework.ComparisonFailure: expected:&lt;Not [f]ound&gt; but was:&lt;Not [F]ound&gt;&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:100)&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:107)&#13;
+	at com.openweather.pages.HomePage.verify_error_message(HomePage.java:91)&#13;
+	at com.openweather.stepdefinition.HomePageSteps.user_verify_error_message(HomePageSteps.java:53)&#13;
+	at ✽.Then User verifies error message display(E:/OpenWheather/OpenWheatherBDDFramework/src/main/java/com/openweather/feature/verifyhomepage.feature:16)&#13;
+&#13;
+</failure>
+        <testcase name="Given user opens browser" classname="Scenario: Error_Message_Verification" time="0.184"/>
+        <testcase name="Then User already on Home Page" classname="Scenario: Error_Message_Verification" time="0.146"/>
+        <testcase name="Then User enters valid CityName" classname="Scenario: Error_Message_Verification" time="3.687"/>
+        <testcase name="Then User clicks on search button" classname="Scenario: Error_Message_Verification" time="0.063"/>
+        <testcase name="Then User verifies message display" classname="Scenario: Error_Message_Verification" time="0.919"/>
+        <testcase name="Then User closes the application" classname="Scenario: Error_Message_Verification" time="17.646"/>
+        <testcase name="Given user opens browser" classname="Scenario: Error_Message_Verification" time="0.059"/>
+        <testcase name="Then User already on Home Page" classname="Scenario: Error_Message_Verification" time="0.104"/>
+        <testcase name="Then User enters invalid CityName" classname="Scenario: Error_Message_Verification" time="3.8"/>
+        <testcase name="Then User clicks on search button" classname="Scenario: Error_Message_Verification" time="0.154"/>
+        <testcase name="Then User verifies error message display" classname="Scenario: Error_Message_Verification" time="0.037">
+          <failure>
+            <expected>Not found</expected>
+            <actual>Not Found</actual>junit.framework.ComparisonFailure: expected:&lt;Not [f]ound&gt; but was:&lt;Not [F]ound&gt;&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:100)&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:107)&#13;
+	at com.openweather.pages.HomePage.verify_error_message(HomePage.java:91)&#13;
+	at com.openweather.stepdefinition.HomePageSteps.user_verify_error_message(HomePageSteps.java:53)&#13;
+	at ✽.Then User verifies error message display(E:/OpenWheather/OpenWheatherBDDFramework/src/main/java/com/openweather/feature/verifyhomepage.feature:16)&#13;
+&#13;
+</failure>
+        </testcase>
+        <testcase name="Then User closes the application" classname="Scenario: Error_Message_Verification" time="0.19" ignored="true"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

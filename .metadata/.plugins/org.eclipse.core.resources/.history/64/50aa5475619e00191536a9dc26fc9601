@@ -1,0 +1,34 @@
+package StepDefination;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import junit.framework.Assert;
+
+public class LabelStepDefination {
+
+	WebDriver driver;
+	
+	@Given("^User already on Home Page$")
+	public void User_already_on_Home_Page(){
+	System.setProperty("webdriver.chrome.driver", "E://NewWorkSpace//Automation//exefiles");
+	driver=new ChromeDriver();
+	driver.get("https://openweathermap.org/");
+	}
+	
+	@When("^Title of the page is Сurrent weather and forecast - OpenWeatherMap$")
+	public void Title_of_Login_Page(){
+	String title=driver.getTitle();
+	Assert.assertEquals("Сurrent weather and forecast - OpenWeatherMap", title);
+	}
+	
+	@Then("^User enters CityName$")
+	public void User_enters_cityname(){
+	driver.findElement(By.id("q")).sendKeys("Mum");
+	driver.findElement(By.xpath("//button[@type='submit']"));
+	}
+}

@@ -1,0 +1,6 @@
+Feature: Verify Label feature
+
+Scenario: OpenWheather_Label_Verification
+
+Given user is in Home Page
+

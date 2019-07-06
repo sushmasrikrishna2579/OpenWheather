@@ -1,0 +1,17 @@
+Feature: Label verification on Home Page
+
+Scenario: Error_Message_Verification
+
+Given User already on Home Page
+When Title of the page is Сurrent weather and forecast - OpenWeatherMap
+Then User enters invalid CityName
+Then User clicks on Search button
+Then User verifies the message
+
+Scenario: Valid_City_Verification
+
+Given User already on Home Page
+When Title of the page is Сurrent weather and forecast - OpenWeatherMap
+Then User enters CityName
+Then User clicks on Search button
+Then User verifies the City entered

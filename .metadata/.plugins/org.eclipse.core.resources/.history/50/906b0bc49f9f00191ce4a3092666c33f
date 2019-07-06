@@ -1,0 +1,97 @@
+package com.openweather.util;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class TestBase {
+	
+	public static WebDriver driver;
+	public static Properties prop;
+	
+	public TestBase() {
+		try{
+		prop =new Properties();
+		FileInputStream fis=new FileInputStream("E:/OpenWheather/OpenWheatherBDDFramework/src/main/java/com/openweather/config/config.properties");
+		prop.load(fis);
+		}
+		catch(FileNotFoundException e){
+			e.printStackTrace();
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public static void initilization(){
+		String browser=prop.getProperty("browsername");
+		System.out.println("The browser selected is" +browser);
+		if(browser.equals("IE"))
+		{
+			DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
+			capabilities.setCapability(CapabilityType.BROWSER_NAME, "IE");
+			capabilities.setCapability(InternetExplorerDriver.
+			INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,true);
+			System.setProperty("webdriver.ie.driver", "E:/NaveenAutomation/FreeCRM/src/main/java/com/crm/qa/drivers/IEDriverServer.exe");
+			driver = new InternetExplorerDriver(capabilities);
+		}
+		else if(browser.equals("chrome")){
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("user-data-dir=/path/to/your/custom/profile");
+			options.addArguments("start-maximized");
+			Map<String, Object> prefs = new HashMap<String, Object>();
+			prefs.put("profile.default_content_settings.popups", 1);
+			options.setExperimentalOption("prefs", prefs);
+			System.setProperty("webdriver.chrome.driver", "E:/NewWorkSpace/Automation/exefiles/chromedriver.exe");
+			driver = new ChromeDriver(options);
+		}
+		else if(browser.equals("firefox")){
+			
+			DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+			capabilities.setCapability("marionette", true);
+			System.setProperty("webdriver.gecko.driver", "E:/NaveenAutomation/FreeCRM/src/main/java/com/crm/qa/drivers/gekodriver.exe");
+			driver = new FirefoxDriver();
+		}
+		else if(browser.equals("safari")){
+			System.setProperty("webdriver.safari.driver", "E:/NaveenAutomation/FreeCRM/src/main/java/com/crm/qa/drivers/safaridriver.exe");
+			driver = new SafariDriver();
+		}
+	
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIME, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_LOAD_TIME, TimeUnit.SECONDS);
+		
+		driver.get(prop.getProperty("url"));
+		
+		System.out.println("Webdriver Wait");
+		WebDriverWait wait=new WebDriverWait(driver, 40);
+		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//div[@class='form-group search-cities__block']//input[@id='q']"))));
+		System.out.println("Leaving Webdriver Wait");
+		
+		
+	}
+	
+	public static void close_app(){
+		driver.quit();
+	}
+	
+
+}

@@ -1,0 +1,10 @@
+Feature: Label verification on Home Page
+
+Scenario: Error_Message_Verification
+
+Given user opens browser
+Then User already on Home Page
+Then User enters invalid CityName
+Then User clicks on search button
+Then User closes the application
+

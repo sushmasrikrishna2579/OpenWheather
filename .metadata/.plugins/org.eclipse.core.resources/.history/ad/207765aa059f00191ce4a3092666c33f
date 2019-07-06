@@ -1,0 +1,32 @@
+package com.openweather.pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class HomePage {
+	
+	//Page Factory OR
+	
+	@FindBy(xpath="//div[@class='form-group search-cities__block']//input[@id='q']")
+	WebElement CityName;
+	
+	@FindBy(xpath="//button[@class='btn btn-orange']")
+	WebElement SearchButton;
+	
+	@FindBy(xpath="//div[@class='alert alert-warning']")
+	WebElement AlertMessage;
+	
+	@FindBy(xpath="/html[1]/body[1]/main[1]/div[4]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[2]/b[1]/a[1]")
+	WebElement CityDisplay;
+	
+	@FindBy(xpath="//img[@class='img-responsive']")
+	WebElement Logo;
+	
+	@FindBy(xpath="//a[@class='pull-right'][contains(text(),'Sign In')]")
+	WebElement SignIn;
+	
+	@FindBy(xpath="//a[contains(text(),'Sign Up')]")
+	WebElement SignUp;
+	
+
+}

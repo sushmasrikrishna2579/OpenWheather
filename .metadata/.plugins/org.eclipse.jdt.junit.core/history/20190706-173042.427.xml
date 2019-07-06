@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner (1)" project="OpenWheatherBDDFramework" tests="19" started="19" failures="2" errors="0" ignored="1">
+  <testsuite name="com.openweather.runner.TestRunner" time="56.945">
+    <testsuite name="Feature: Label verification on Home Page" time="56.945">
+      <testsuite name="Scenario: Verification of labels and logo" time="0.423" incomplete="true">
+        <failure>
+          <expected/>
+          <actual>Sign In</actual>junit.framework.ComparisonFailure: expected:&lt;[]&gt; but was:&lt;[Sign In]&gt;&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:100)&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:107)&#13;
+	at com.openweather.pages.HomePage.menu_list(HomePage.java:143)&#13;
+	at com.openweather.stepdefinition.HomePageSteps.user_verify_primary_menu(HomePageSteps.java:77)&#13;
+	at ✽.Then User verifies the primary menu(E:/OpenWheather/OpenWheatherBDDFramework/src/main/java/com/openweather/feature/verifyhomepage.feature:10)&#13;
+&#13;
+</failure>
+        <testcase name="Given user opens browser" classname="Scenario: Verification of labels and logo" time="0.106"/>
+        <testcase name="Then User already on Home Page" classname="Scenario: Verification of labels and logo" time="0.088"/>
+        <testcase name="Then User verifies the logo display" classname="Scenario: Verification of labels and logo" time="0.066"/>
+        <testcase name="Then User verifies the sign in link" classname="Scenario: Verification of labels and logo" time="0.07"/>
+        <testcase name="Then User verifies the sign up link" classname="Scenario: Verification of labels and logo" time="0.087"/>
+        <testcase name="Then User verifies the primary menu" classname="Scenario: Verification of labels and logo" time="0.005">
+          <failure>
+            <expected/>
+            <actual>Sign In</actual>junit.framework.ComparisonFailure: expected:&lt;[]&gt; but was:&lt;[Sign In]&gt;&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:100)&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:107)&#13;
+	at com.openweather.pages.HomePage.menu_list(HomePage.java:143)&#13;
+	at com.openweather.stepdefinition.HomePageSteps.user_verify_primary_menu(HomePageSteps.java:77)&#13;
+	at ✽.Then User verifies the primary menu(E:/OpenWheather/OpenWheatherBDDFramework/src/main/java/com/openweather/feature/verifyhomepage.feature:10)&#13;
+&#13;
+</failure>
+        </testcase>
+        <testcase name="Then User closes the application" classname="Scenario: Verification of labels and logo" time="0.0" ignored="true"/>
+      </testsuite>
+      <testsuite name="Scenario: Verification when valid city is entered" time="5.473">
+        <testcase name="Given user opens browser" classname="Scenario: Verification when valid city is entered" time="0.051"/>
+        <testcase name="Then User already on Home Page" classname="Scenario: Verification when valid city is entered" time="0.139"/>
+        <testcase name="Then User enters valid CityName" classname="Scenario: Verification when valid city is entered" time="4.34"/>
+        <testcase name="Then User clicks on search button" classname="Scenario: Verification when valid city is entered" time="0.061"/>
+        <testcase name="Then User verifies message display" classname="Scenario: Verification when valid city is entered" time="0.882"/>
+        <testcase name="Then User closes the application" classname="Scenario: Verification when valid city is entered" time="0.0"/>
+      </testsuite>
+      <testsuite name="Scenario: Verification when invalid city is entered" time="4.133">
+        <testcase name="Given user opens browser" classname="Scenario: Verification when invalid city is entered" time="0.021"/>
+        <testcase name="Then User already on Home Page" classname="Scenario: Verification when invalid city is entered" time="0.119"/>
+        <testcase name="Then User enters invalid CityName" classname="Scenario: Verification when invalid city is entered" time="2.908"/>
+        <testcase name="Then User clicks on search button" classname="Scenario: Verification when invalid city is entered" time="0.054"/>
+        <testcase name="Then User verifies error message display" classname="Scenario: Verification when invalid city is entered" time="0.953"/>
+        <testcase name="Then User closes the application" classname="Scenario: Verification when invalid city is entered" time="0.078"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner (1)" project="OpenWheatherBDDFramework" tests="12" started="12" failures="0" errors="0" ignored="0">
+  <testsuite name="com.openweather.runner.TestRunner" time="30.397">
+    <testsuite name="Feature: Label verification on Home Page" time="30.397">
+      <testsuite name="Scenario: Error_Message_Verification" time="30.397">
+        <testcase name="Given user opens browser" classname="Scenario: Error_Message_Verification" time="0.1"/>
+        <testcase name="Then User already on Home Page" classname="Scenario: Error_Message_Verification" time="0.129"/>
+        <testcase name="Then User enters valid CityName" classname="Scenario: Error_Message_Verification" time="2.744"/>
+        <testcase name="Then User clicks on search button" classname="Scenario: Error_Message_Verification" time="0.114"/>
+        <testcase name="Then User verifies message display" classname="Scenario: Error_Message_Verification" time="0.938"/>
+        <testcase name="Then User closes the application" classname="Scenario: Error_Message_Verification" time="21.798"/>
+        <testcase name="Given user opens browser" classname="Scenario: Error_Message_Verification" time="0.067"/>
+        <testcase name="Then User already on Home Page" classname="Scenario: Error_Message_Verification" time="0.111"/>
+        <testcase name="Then User enters invalid CityName" classname="Scenario: Error_Message_Verification" time="3.373"/>
+        <testcase name="Then User clicks on search button" classname="Scenario: Error_Message_Verification" time="0.057"/>
+        <testcase name="Then User verifies error message display" classname="Scenario: Error_Message_Verification" time="0.887"/>
+        <testcase name="Then User closes the application" classname="Scenario: Error_Message_Verification" time="0.079"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

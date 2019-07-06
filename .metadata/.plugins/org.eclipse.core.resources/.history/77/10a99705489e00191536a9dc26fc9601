@@ -1,0 +1,4 @@
+Feature: Verify Label feature
+
+Scenario: OpenWheather_Label_Verification
+

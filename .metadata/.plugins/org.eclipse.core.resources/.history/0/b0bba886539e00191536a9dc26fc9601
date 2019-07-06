@@ -1,0 +1,8 @@
+Feature: Label verification on Home Page
+
+Scenario: Label_Verification
+
+Given User is already in Home Page
+When Title of the page is Сurrent weather and forecast - OpenWeatherMap
+Then User enters CityName
+And User clicks on Search button

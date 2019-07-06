@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner (1)" project="OpenWheatherBDDFramework" tests="6" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="com.openweather.runner.TestRunner" incomplete="true">
+    <testsuite name="Feature: Label verification on Home Page" incomplete="true">
+      <testsuite name="Scenario: Error_Message_Verification" incomplete="true">
+        <testcase name="Given user opens browser" classname="Scenario: Error_Message_Verification" time="0.083"/>
+        <testcase name="Then User already on Home Page" classname="Scenario: Error_Message_Verification" time="0.139"/>
+        <testcase name="Then User enters invalid CityName" classname="Scenario: Error_Message_Verification" time="3.173"/>
+        <testcase name="Then User clicks on search button" classname="Scenario: Error_Message_Verification" incomplete="true"/>
+        <testcase name="Then User verifies message display" classname="Scenario: Error_Message_Verification" incomplete="true"/>
+        <testcase name="Then User closes the application" classname="Scenario: Error_Message_Verification" incomplete="true"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

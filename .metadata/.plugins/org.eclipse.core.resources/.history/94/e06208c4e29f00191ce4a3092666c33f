@@ -1,0 +1,52 @@
+package com.openweather.stepdefinition;
+
+import com.openweather.pages.HomePage;
+import com.openweather.util.TestBase;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import junit.framework.Assert;
+
+public class HomePageSteps extends TestBase {
+	
+	HomePage homepage;
+	
+	@Given("^user opens browser$")
+	public void user_opens_browser() throws Throwable{
+		TestBase.initilization();
+	}
+	
+	@Then("^User already on Home Page$")
+	public void user_on_homepage() throws Throwable{
+		homepage=new HomePage();
+		String title=homepage.title_verify();
+		Assert.assertEquals("Сurrent weather and forecast - OpenWeatherMap", title);
+	}
+	
+	@Then("^User enters invalid CityName$")
+	public void user_enters_cityname() throws Throwable{
+		homepage=new HomePage();
+		homepage.enter_city();
+	}
+	
+	@Then("^User clicks on search button$")
+	public void user_click_search() throws Throwable{
+		homepage=new HomePage();
+		homepage.click_search();
+	}
+	
+	@Then("^User verifies message display$")
+	public void user_verify_message() throws Throwable{
+		homepage=new HomePage();
+		homepage.verify_message();
+	}
+	
+	@Then("^User closes the application$")
+	public void user_close_app() throws Throwable{
+		homepage=new HomePage();
+		homepage.close_app();
+	}
+	
+	
+
+}

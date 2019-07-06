@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="124.096797">
+<testcase classname="Label verification on Home Page" name="Verification of labels and logo" time="48.526799">
+<system-out><![CDATA[Given user opens browser....................................................passed
+Then User already on Home Page..............................................passed
+Then User verifies the logo display.........................................passed
+Then User verifies the sign in link.........................................passed
+Then User verifies the sign up link.........................................passed
+Then User verifies the primary menu.........................................passed
+Then User closes the application............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Label verification on Home Page" name="Verification when valid city is entered" time="36.25241">
+<system-out><![CDATA[Given user opens browser....................................................passed
+Then User already on Home Page..............................................passed
+Then User enters city "Mumbai"..............................................passed
+Then User clicks on search button...........................................passed
+Then User verifies message display..........................................passed
+Then User closes the application............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Label verification on Home Page" name="Verification when invalid city is entered" time="39.317588">
+<system-out><![CDATA[Given user opens browser....................................................passed
+Then User already on Home Page..............................................passed
+Then User enters city "Mum".................................................passed
+Then User clicks on search button...........................................passed
+Then User verifies error message display....................................passed
+Then User closes the application............................................passed
+]]></system-out>
+</testcase>
+</testsuite>

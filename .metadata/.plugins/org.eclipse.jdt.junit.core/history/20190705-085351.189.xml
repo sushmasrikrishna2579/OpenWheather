@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="OpenWheatherBDDFramework" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="Runner.TestRunner" time="4.339">
+    <testsuite name="Feature: Label verification on Home Page" time="4.339">
+      <testsuite name="Scenario: Label_Verification" time="4.339">
+        <testcase name="Given User already on Home Page" classname="Scenario: Label_Verification" time="0.022"/>
+        <testcase name="When Title of the page is Сurrent weather and forecast - OpenWeatherMap" classname="Scenario: Label_Verification" time="0.223"/>
+        <testcase name="Then User enters CityName" classname="Scenario: Label_Verification" time="3.919"/>
+        <testcase name="Then User clicks on Search button" classname="Scenario: Label_Verification" time="0.083"/>
+        <testcase name="Then User verifies the message" classname="Scenario: Label_Verification" time="0.091"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

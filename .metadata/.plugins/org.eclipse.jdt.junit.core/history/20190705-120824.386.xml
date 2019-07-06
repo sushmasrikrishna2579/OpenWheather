@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="OpenWheatherBDDFramework" tests="18" started="18" failures="0" errors="0" ignored="0">
+  <testsuite name="Runner.TestRunner" time="32.337">
+    <testsuite name="Feature: Label verification on Home Page" time="32.337">
+      <testsuite name="Scenario: Error_Message_Verification" time="4.355">
+        <testcase name="Given User already on Home Page" classname="Scenario: Error_Message_Verification" time="0.025"/>
+        <testcase name="When Title of the page is Сurrent weather and forecast - OpenWeatherMap" classname="Scenario: Error_Message_Verification" time="0.239"/>
+        <testcase name="Then User enters invalid CityName" classname="Scenario: Error_Message_Verification" time="2.709"/>
+        <testcase name="Then User clicks on Search button" classname="Scenario: Error_Message_Verification" time="0.049"/>
+        <testcase name="Then User verifies the message" classname="Scenario: Error_Message_Verification" time="1.331"/>
+        <testcase name="Then User closes the application" classname="Scenario: Error_Message_Verification" time="0.002"/>
+      </testsuite>
+      <testsuite name="Scenario: Valid_City_Verification" time="4.5">
+        <testcase name="Given User already on Home Page" classname="Scenario: Valid_City_Verification" time="0.017"/>
+        <testcase name="When Title of the page is Сurrent weather and forecast - OpenWeatherMap" classname="Scenario: Valid_City_Verification" time="0.191"/>
+        <testcase name="Then User enters valid CityName" classname="Scenario: Valid_City_Verification" time="3.316"/>
+        <testcase name="Then User clicks on Search button" classname="Scenario: Valid_City_Verification" time="0.052"/>
+        <testcase name="Then User verifies the City entered" classname="Scenario: Valid_City_Verification" time="0.924"/>
+        <testcase name="Then User closes the application" classname="Scenario: Valid_City_Verification" time="0.0"/>
+      </testsuite>
+      <testsuite name="Scenario: Label_Verification" time="0.673">
+        <testcase name="Given User already on Home Page" classname="Scenario: Label_Verification" time="0.018"/>
+        <testcase name="When Title of the page is Сurrent weather and forecast - OpenWeatherMap" classname="Scenario: Label_Verification" time="0.063"/>
+        <testcase name="Then User verifies the logo display" classname="Scenario: Label_Verification" time="0.061"/>
+        <testcase name="Then User verifies the text Weather in your city" classname="Scenario: Label_Verification" time="0.091"/>
+        <testcase name="Then User verifies Sign In and Sign Up links" classname="Scenario: Label_Verification" time="0.351"/>
+        <testcase name="Then User verifies primary menu links labels" classname="Scenario: Label_Verification" time="0.089"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

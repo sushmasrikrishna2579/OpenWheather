@@ -1,0 +1,159 @@
+package StepDefination;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import junit.framework.Assert;
+
+public class LabelStepDefination {
+
+	WebDriver driver;
+	
+	@Given("^User already on Home Page$")
+	public void User_already_on_Home_Page(){
+	System.setProperty("webdriver.chrome.driver", "E://NewWorkSpace//Automation//exefiles//chromedriver.exe");
+	driver=new ChromeDriver();
+	driver.get("https://openweathermap.org/");
+	driver.manage().window().maximize();
+	
+	}
+	
+	@When("^Title of the page is Сurrent weather and forecast - OpenWeatherMap$")
+	public void Title_of_Login_Page(){
+	String title=driver.getTitle();
+	Assert.assertEquals("Сurrent weather and forecast - OpenWeatherMap", title);
+	}
+	
+	@Then("^User enters invalid CityName$")
+	public void User_enters_cityname() {
+	WebDriverWait wait=new WebDriverWait(driver, 40);
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='form-group search-cities__block']//input[@id='q']")));
+	driver.findElement(By.xpath("//div[@class='form-group search-cities__block']//input[@id='q']")).sendKeys("Mum");
+	
+	}
+	
+	@Then("^User clicks on Search button$")
+	public void User_clicks_search_button(){
+	driver.findElement(By.xpath("//button[@class='btn btn-orange']")).click();
+	}
+	
+	@Then("^User verifies the message$")
+	public void User_verifies_message(){
+	String message=driver.findElement(By.xpath("//div[@class='alert alert-warning']")).getText();
+	System.out.println(message);
+	System.out.println(message.length());
+	String message1=message.substring(2);
+	System.out.println(message1);
+	Assert.assertEquals(message1, "Not found");
+	}
+	
+	@Then("^User enters valid CityName$")
+	public void User_enters_valid_cityname() {
+	WebDriverWait wait=new WebDriverWait(driver, 40);
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='form-group search-cities__block']//input[@id='q']")));
+	driver.findElement(By.xpath("//div[@class='form-group search-cities__block']//input[@id='q']")).sendKeys("Mumbai");
+	
+	}
+	
+	@Then("^User verifies the City entered$")
+	public void User_verifies_city_entered(){
+	String message=driver.findElement(By.xpath("/html[1]/body[1]/main[1]/div[4]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[2]/b[1]/a[1]")).getText();
+	System.out.println(message);
+	System.out.println(message.length());
+	String message1=message.substring(0,6);
+	System.out.println(message1);
+	Assert.assertEquals(message1, "Mumbai");
+	}
+	
+	@Then("^User closes the application$")
+	public void User_closes_application(){
+		driver.quit();
+		
+	}
+	
+	@Then("^User verifies the logo display$")
+	public void User_logo_display(){
+	try{
+		boolean value = driver.findElement(By.xpath("//img[@class='img-responsive']")).isDisplayed();
+		if(value==true){
+			Assert.assertEquals(value, true);
+		}
+	}
+	catch(Exception e){
+		System.out.println(e);
+	}	
+}
+	
+	@Then("^User verifies the text Weather in your city$")
+	public void User_text_verify(){
+	try{
+		String Expval=driver.findElement(By.xpath("/html[1]/body[1]/main[1]/div[1]/div[1]/div[1]/h2[1]/span[1]]")).getText();
+		if(Expval.equalsIgnoreCase("Weather in your city")){
+			Assert.assertTrue("Verification of text", true);
+		}
+	}
+	catch(Exception e){
+		System.out.println(e);
+	}	
+}
+	
+	@Then("^User verifies Sign In and Sign Up links$")
+	public void User_verify_SignIn_SignUP(){
+	try{
+		boolean signinexp = driver.findElement(By.xpath("//a[@class='pull-right'][contains(text(),'Sign In')]")).isDisplayed();
+		if(signinexp==true){
+			Assert.assertTrue("Verification of sign in link", true);
+		}
+		boolean signupexp = driver.findElement(By.xpath("//a[contains(text(),'Sign Up')]")).isDisplayed();
+		if(signupexp==true){
+			Assert.assertTrue("Verification of sign up link", true);
+		}
+		
+	}
+	catch(Exception e){
+		System.out.println(e);
+	}	
+}
+	
+	@Then("^User verifies primary menu links labels$")
+	public void User_verify_primary_menu(){
+	try{
+		ArrayList<String> list=new ArrayList<String>();
+		list.add("Weather");
+		list.add("Maps");
+		list.add("Guide");
+		list.add("API");
+		list.add("Partners");
+		list.add("Stations");
+		list.add("Widgets");
+		list.add("Blog");
+		
+		List<WebElement> lst = driver.findElements(By.xpath("/html[1]/body[1]/div[2]/div[1]/div[1]/div[1]/div[2]/ul[1]/li"));
+		int sz=lst.size();
+		for(int i=0;i<sz;i++){
+			String Expval = lst.get(i).getText();
+			String Actval=list.get(i);
+			System.out.println(Expval);
+			System.out.println(Actval);
+			
+			
+		}
+	}
+	catch(Exception e){
+		System.out.println(e);
+	}	
+}
+	
+	
+}

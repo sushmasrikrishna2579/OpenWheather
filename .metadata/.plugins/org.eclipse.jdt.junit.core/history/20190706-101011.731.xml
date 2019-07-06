@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner (1)" project="OpenWheatherBDDFramework" tests="6" started="6" failures="2" errors="0" ignored="1">
+  <testsuite name="com.openweather.runner.TestRunner" time="3.531">
+    <testsuite name="Feature: Label verification on Home Page" time="3.531">
+      <testsuite name="Scenario: Error_Message_Verification" time="3.46" incomplete="true">
+        <failure>
+          <expected>mbai, IN</expected>
+          <actual>Not found</actual>junit.framework.ComparisonFailure: expected:&lt;[mbai, IN]&gt; but was:&lt;[Not found]&gt;&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:100)&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:107)&#13;
+	at com.openweather.pages.HomePage.verify_message(HomePage.java:68)&#13;
+	at com.openweather.stepdefinition.HomePageSteps.user_verify_message(HomePageSteps.java:41)&#13;
+	at ✽.Then User verifies message display(E:/OpenWheather/OpenWheatherBDDFramework/src/main/java/com/openweather/feature/verifyhomepage.feature:9)&#13;
+&#13;
+</failure>
+        <testcase name="Given user opens browser" classname="Scenario: Error_Message_Verification" time="0.094"/>
+        <testcase name="Then User already on Home Page" classname="Scenario: Error_Message_Verification" time="0.135"/>
+        <testcase name="Then User enters invalid CityName" classname="Scenario: Error_Message_Verification" time="3.095"/>
+        <testcase name="Then User clicks on search button" classname="Scenario: Error_Message_Verification" time="0.061"/>
+        <testcase name="Then User verifies message display" classname="Scenario: Error_Message_Verification" time="0.074">
+          <failure>
+            <expected>mbai, IN</expected>
+            <actual>Not found</actual>junit.framework.ComparisonFailure: expected:&lt;[mbai, IN]&gt; but was:&lt;[Not found]&gt;&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:100)&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:107)&#13;
+	at com.openweather.pages.HomePage.verify_message(HomePage.java:68)&#13;
+	at com.openweather.stepdefinition.HomePageSteps.user_verify_message(HomePageSteps.java:41)&#13;
+	at ✽.Then User verifies message display(E:/OpenWheather/OpenWheatherBDDFramework/src/main/java/com/openweather/feature/verifyhomepage.feature:9)&#13;
+&#13;
+</failure>
+        </testcase>
+        <testcase name="Then User closes the application" classname="Scenario: Error_Message_Verification" time="0.069" ignored="true"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="OpenWheatherBDDFramework" tests="10" started="10" failures="2" errors="0" ignored="0">
+  <testsuite name="Runner.TestRunner" time="23.194">
+    <testsuite name="Feature: Label verification on Home Page" time="23.194">
+      <testsuite name="Scenario: Error_Message_Verification" time="3.778">
+        <testcase name="Given User already on Home Page" classname="Scenario: Error_Message_Verification" time="0.024"/>
+        <testcase name="When Title of the page is Сurrent weather and forecast - OpenWeatherMap" classname="Scenario: Error_Message_Verification" time="0.229"/>
+        <testcase name="Then User enters invalid CityName" classname="Scenario: Error_Message_Verification" time="3.435"/>
+        <testcase name="Then User clicks on Search button" classname="Scenario: Error_Message_Verification" time="0.089"/>
+        <testcase name="Then User verifies the message" classname="Scenario: Error_Message_Verification" time="0.001"/>
+      </testsuite>
+      <testsuite name="Scenario: Valid_City_Verification" time="6.913" incomplete="true">
+        <failure>
+          <expected>umbai</expected>
+          <actual>Mumbai</actual>junit.framework.ComparisonFailure: expected:&lt;[]umbai&gt; but was:&lt;[M]umbai&gt;&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:100)&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:107)&#13;
+	at StepDefination.LabelStepDefination.User_verifies_city_entered(LabelStepDefination.java:72)&#13;
+	at ✽.Then User verifies the City entered(E:/OpenWheather/OpenWheatherBDDFramework/src/main/java/Feature/labelverify.feature:17)&#13;
+&#13;
+</failure>
+        <testcase name="Given User already on Home Page" classname="Scenario: Valid_City_Verification" time="0.016"/>
+        <testcase name="When Title of the page is Сurrent weather and forecast - OpenWeatherMap" classname="Scenario: Valid_City_Verification" time="0.211"/>
+        <testcase name="Then User enters valid CityName" classname="Scenario: Valid_City_Verification" time="6.514"/>
+        <testcase name="Then User clicks on Search button" classname="Scenario: Valid_City_Verification" time="0.05"/>
+        <testcase name="Then User verifies the City entered" classname="Scenario: Valid_City_Verification" time="0.122">
+          <failure>
+            <expected>umbai</expected>
+            <actual>Mumbai</actual>junit.framework.ComparisonFailure: expected:&lt;[]umbai&gt; but was:&lt;[M]umbai&gt;&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:100)&#13;
+	at junit.framework.Assert.assertEquals(Assert.java:107)&#13;
+	at StepDefination.LabelStepDefination.User_verifies_city_entered(LabelStepDefination.java:72)&#13;
+	at ✽.Then User verifies the City entered(E:/OpenWheather/OpenWheatherBDDFramework/src/main/java/Feature/labelverify.feature:17)&#13;
+&#13;
+</failure>
+        </testcase>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

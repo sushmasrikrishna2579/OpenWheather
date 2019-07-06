@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner (1)" project="OpenWheatherBDDFramework" tests="19" started="19" failures="0" errors="0" ignored="0">
+  <testsuite name="com.openweather.runner.TestRunner" time="69.658">
+    <testsuite name="Feature: Label verification on Home Page" time="69.658">
+      <testsuite name="Scenario: Verification of labels and logo" time="1.533">
+        <testcase name="Given user opens browser" classname="Scenario: Verification of labels and logo" time="0.096"/>
+        <testcase name="Then User already on Home Page" classname="Scenario: Verification of labels and logo" time="0.088"/>
+        <testcase name="Then User verifies the logo display" classname="Scenario: Verification of labels and logo" time="0.064"/>
+        <testcase name="Then User verifies the sign in link" classname="Scenario: Verification of labels and logo" time="0.071"/>
+        <testcase name="Then User verifies the sign up link" classname="Scenario: Verification of labels and logo" time="0.346"/>
+        <testcase name="Then User verifies the primary menu" classname="Scenario: Verification of labels and logo" time="0.868"/>
+        <testcase name="Then User closes the application" classname="Scenario: Verification of labels and logo" time="0.0"/>
+      </testsuite>
+      <testsuite name="Scenario: Verification when valid city is entered" time="4.563">
+        <testcase name="Given user opens browser" classname="Scenario: Verification when valid city is entered" time="0.053"/>
+        <testcase name="Then User already on Home Page" classname="Scenario: Verification when valid city is entered" time="0.141"/>
+        <testcase name="Then User enters valid &quot;Mumbai&quot;" classname="Scenario: Verification when valid city is entered" time="3.447"/>
+        <testcase name="Then User clicks on search button" classname="Scenario: Verification when valid city is entered" time="0.052"/>
+        <testcase name="Then User verifies message display" classname="Scenario: Verification when valid city is entered" time="0.869"/>
+        <testcase name="Then User closes the application" classname="Scenario: Verification when valid city is entered" time="0.001"/>
+      </testsuite>
+      <testsuite name="Scenario: Verification when invalid city is entered" time="8.139">
+        <testcase name="Given user opens browser" classname="Scenario: Verification when invalid city is entered" time="0.046"/>
+        <testcase name="Then User already on Home Page" classname="Scenario: Verification when invalid city is entered" time="0.356"/>
+        <testcase name="Then User enters invalid CityName" classname="Scenario: Verification when invalid city is entered" time="6.504"/>
+        <testcase name="Then User clicks on search button" classname="Scenario: Verification when invalid city is entered" time="0.189"/>
+        <testcase name="Then User verifies error message display" classname="Scenario: Verification when invalid city is entered" time="0.974"/>
+        <testcase name="Then User closes the application" classname="Scenario: Verification when invalid city is entered" time="0.07"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

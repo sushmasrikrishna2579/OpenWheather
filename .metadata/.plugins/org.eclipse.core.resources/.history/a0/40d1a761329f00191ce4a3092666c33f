@@ -1,0 +1,16 @@
+package com.openweather.stepdefinition;
+
+import com.openweather.util.TestBase;
+
+import cucumber.api.java.en.Given;
+
+public class HomePageSteps extends TestBase {
+	
+	@Given("^user opens browser$")
+	public void user_opens_browser() throws Throwable{
+		TestBase.initilization();
+	}
+	
+	
+
+}
